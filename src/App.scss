@@ -1,0 +1,54 @@
+@use './styles/variables.scss' as v;
+
+.header {
+    position: relative;
+
+    & > h1 {
+        display: block;
+    }
+
+    &_displaySelector {
+        display: flex;
+        flex-direction: row;
+
+        & > div:first-child {
+            background-color: lightgray;
+            height: 50px;
+            width: 55px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px 0 0 25px;
+
+            &:hover:not(.selected) {
+                cursor: pointer;
+                background-color: darkgray;
+            }
+
+            &.selected {
+                background-color: darkgray;
+            }
+        }
+
+        & > div:nth-child(2) {
+            background-color: lightgray;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            border-radius: 0 25px 25px 0;
+
+            &:hover:not(.selected) {
+                cursor: pointer;
+                background-color: darkgray;
+            }
+
+            &.selected {
+                background-color: darkgray;
+            }
+        }
+    }
+}
