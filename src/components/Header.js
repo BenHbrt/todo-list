@@ -1,11 +1,15 @@
 import {ReactComponent as Calendar} from '../img/calendar.svg';
 import {ReactComponent as Kanban} from '../img/kanban.svg';
+import {ReactComponent as Light} from '../img/light_mode.svg';
+import {ReactComponent as Dark} from '../img/dark_mode.svg';
 import { useContext } from 'react';
-import { DisplayContext } from '../App';
+import { DisplayContext, LightContext } from '../App';
+import Switch from "react-switch";
 
 const Header = () => {
 
     const [displaySelect, setDisplaySelect] = useContext(DisplayContext);
+    const [isLight, setIsLight] = useContext(LightContext);
 
     const clickHandler = (target) => {
         if (target !== displaySelect) {
@@ -27,8 +31,15 @@ const Header = () => {
                 </div>
             </div>
             <h1>Todo List</h1>
-            <div className="light-selector">
-            
+            <div className="header_lightSelector">
+                <Dark />
+                <Switch    
+                    checked={isLight}
+                    onChange={() => setIsLight(!isLight)}
+                    checkedIcon={false}
+                    uncheckedIcon={false}
+                />
+                <Light />
             </div>
         </div>
     );

@@ -1,7 +1,11 @@
 @use './styles/variables.scss' as v;
 
 .header {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0.8rem;
 
     & > h1 {
         display: block;
@@ -50,5 +54,12 @@
                 background-color: darkgray;
             }
         }
+    }
+
+    &_lightSelector {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.3rem;
     }
 }
