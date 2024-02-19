@@ -20,7 +20,7 @@ const Header = () => {
     };
 
     return (
-        <div className="header">
+        <div className={`header ${isLight ? null : 'dark' }`}>
             
             <div className="header_displaySelector">
                 <div className={`${displaySelect === 'calendar' ? 'selected' : null}`} onClick={() => clickHandler("calendar")}>
@@ -32,14 +32,15 @@ const Header = () => {
             </div>
             <h1>Todo List</h1>
             <div className="header_lightSelector">
-                <Dark />
+                <Dark style={{stroke: `${isLight ? "black" : "#F0F4F8"}`, fill: `${isLight ? "black" : "#F0F4F8"}`}}/>
                 <Switch    
                     checked={isLight}
                     onChange={() => setIsLight(!isLight)}
                     checkedIcon={false}
                     uncheckedIcon={false}
-                />
-                <Light />
+                    onColor="#888"
+                /> 
+                <Light style={{stroke: `${isLight ? "black" : "#F0F4F8"}`, fill: `${isLight ? "black" : "#F0F4F8"}`}}/>
             </div>
         </div>
     );
