@@ -4,8 +4,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-
-
+    align-items: center;
 }
 
 .header {
@@ -14,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0.8rem;
+    width: 100%;
 
     & > h1 {
         display: block;
@@ -69,5 +69,46 @@
         flex-direction: row;
         align-items: center;
         gap: 0.3rem;
+    }
+}
+
+.calendar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+    
+    &_day {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &_date {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.taskCard {
+    box-shadow: 4px 4px 4px 4px v.$shadow;
+    padding: 5.5px 0 7px 10px;
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    
+    & > div:first-child {
+        font-size: 1.4rem;
+    }
+
+    & > div:last-child {
+        font-size: 0.9rem;
+        font-style: italic;
     }
 }

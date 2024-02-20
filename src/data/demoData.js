@@ -2,7 +2,7 @@ const demoData = [
     {
         title: "Go Shopping",
         dueDate: "2024-03-01",
-        notes: "Dont forget to buy milk.",
+        notes: "Don't forget to buy milk.",
         status: "Not Started"
     },
     {
