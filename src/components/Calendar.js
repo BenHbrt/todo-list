@@ -1,4 +1,4 @@
-import demoData from '../data/demoData';
+import { demoData } from '../data/demoData';
 import { orderByDate } from '../data/taskFunctions';
 import { dateString } from '../data/dateFunctions';
 import { useContext } from 'react';
@@ -16,7 +16,7 @@ const Calendar = () => {
                 data.map((item, i) => {
                     return (
                         <div className='calendar_day' key={i}>
-                            <div className='calendar_day_date'>{dateString(item.date)}</div>
+                            <div className='calendar_day_date title'>{dateString(item.date)}</div>
                             {
                                 item.tasks.map((task, i) => {
                                     return (

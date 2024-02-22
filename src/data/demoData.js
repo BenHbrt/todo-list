@@ -1,4 +1,4 @@
-const demoData = [
+export const demoData = [
     {
         title: "Go Shopping",
         dueDate: "2024-03-01",
@@ -37,4 +37,4 @@ const demoData = [
     },
 ];
 
-export default demoData;
+export const demoColumns = ["Not Started", "In Progress", "Completed"];

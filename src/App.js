@@ -5,6 +5,7 @@ import { useState, createContext } from 'react';
 
 import Header from './components/Header';
 import Calendar from './components/Calendar';
+import Kanban from './components/Kanban';
 
 export const DisplayContext = createContext();
 export const LightContext = createContext();
@@ -29,6 +30,7 @@ function App() {
       <DisplayContext.Provider value={[displaySelect, setDisplaySelect]}>
         <Header />
         {displaySelect === 'calendar' ? <Calendar /> : null}
+        {displaySelect === 'kanban' ? <Kanban /> : null}
       </DisplayContext.Provider>
       </LightContext.Provider>
     </div>

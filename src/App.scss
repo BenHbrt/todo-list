@@ -97,11 +97,18 @@
     }
 }
 
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
 .taskCard {
     box-shadow: 4px 4px 4px 4px v.$shadow;
     padding: 5.5px 0 7px 10px;
     border-radius: 10px;
     margin-bottom: 0.6rem;
+    min-width: 300px;
     
     & > div:first-child {
         font-size: 1.4rem;
@@ -110,5 +117,22 @@
     & > div:last-child {
         font-size: 0.9rem;
         font-style: italic;
+    }
+}
+
+.kanban {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    &_column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_container {
+            margin-top: 1.2rem;
+        }
     }
 }

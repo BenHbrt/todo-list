@@ -18,3 +18,17 @@ export const orderByDate = (data) => {
     })
     return arrayOfSortedTasks;
 };
+
+export const sortKanban = (columns, data) => {
+    const sortedObject = {};
+    columns.forEach((item) => {
+        const items = [];
+        data.forEach((task) => {
+            if (task.status === item) {
+                items.push(task);
+            };
+            sortedObject[item] = items;
+        });
+    });
+    return sortedObject;
+};
